@@ -7,11 +7,15 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const config = {
   mode: 'development',
   entry: {
-    main: './src/index.tsx'
+    main: './src/App.tsx'
   },
   // Enable sourcemaps for debugging webpack's output.
   devtool: 'eval-cheap-module-source-map',
-  devServer: { contentBase: ['./dist', './public'], inline: true },
+  devServer: {
+    contentBase: ['./dist', './public'],
+    inline: true,
+    historyApiFallback: true // 为了让react-router的<BrowserRouter>能支持浏览器从子路由路径刷新
+  },
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: ['.ts', '.tsx', '.js'],
