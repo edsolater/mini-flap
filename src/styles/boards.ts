@@ -1,5 +1,12 @@
+/**
+ * 各种板
+ */
+
 import { Interpolation } from '@emotion/core'
 
+/**
+ * 顶部导航块
+ */
 export const navTopBoard: Interpolation = {
   padding: 8,
   position: 'sticky',

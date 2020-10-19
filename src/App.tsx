@@ -8,23 +8,53 @@ import AsideMenu from 'views/AsideMenu'
 import TopicList from 'views/TopicList'
 import ArticleDetail from 'views/ArticleDetail'
 import ArticleList from 'views/ArticleList'
+import { Div } from 'baseUI'
 
 export default function App() {
   return (
     <Router>
-      <AppNavbar />
-      <AsideMenu />
-      <Switch>
-        <Route path='/topicList'>
-          <TopicList />
-        </Route>
-        <Route path='/articleList'>
-          <ArticleList />
-        </Route>
-        <Route path='/articleDetail'>
-          <ArticleDetail />
-        </Route>
-      </Switch>
+      {/* TODO: 抽象成`<Grid>`组件 */}
+      <Div
+        css={{
+          display: 'grid',
+          gridTemplate: `
+            'nav  nav    ' auto
+            'menu content' 1fr / 200px 1fr`,
+          height: '100vh'
+        }}
+      >
+        <Div
+          css={{
+            gridArea: 'nav'
+          }}
+        >
+          <AppNavbar />
+        </Div>
+        <Div
+          css={{
+            gridArea: 'menu'
+          }}
+        >
+          <AsideMenu />
+        </Div>
+        <Div
+          css={{
+            gridArea: 'content'
+          }}
+        >
+          <Switch>
+            <Route path='/topicList'>
+              <TopicList />
+            </Route>
+            <Route path='/articleList'>
+              <ArticleList />
+            </Route>
+            <Route path='/articleDetail'>
+              <ArticleDetail />
+            </Route>
+          </Switch>
+        </Div>
+      </Div>
     </Router>
   )
 }

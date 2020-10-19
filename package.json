@@ -32,7 +32,6 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
-    "classnames": "^2.2.6",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.1",

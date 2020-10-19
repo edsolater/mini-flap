@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css, Interpolation } from '@emotion/core'
 import { forwardRef, ForwardRefRenderFunction } from 'react'
-import { MayArray, MayFunction } from 'typings/tools'
+import { MayArray } from 'typings/tools'
 
 /**
  * 在`<div>`之上提供 emotion 的 css 属性

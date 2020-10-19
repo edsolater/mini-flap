@@ -1,4 +1,5 @@
 export { default as Avatar } from './Avatar'
+export { default as Details } from './Details'
 export { default as Div } from './Div'
 export { default as FlexiableSpace } from './FlexiableSpace'
 export { default as Logo } from './Logo'
