@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 
-import Div from 'baseUI/Div'
-import { FlexiableSpace, Avatar, Text, Logo } from 'placeholderUI'
+import { FlexiableSpace, Avatar, Text, Logo, Div } from 'baseUI'
 import { alignedFlexbox } from 'styles/base'
 import { navTopBoard } from 'styles/boards'
 
@@ -21,7 +20,7 @@ import { navTopBoard } from 'styles/boards'
 
 const TopNavbar: FC<{}> = () => (
   <Div css={[alignedFlexbox, navTopBoard]}>
-    {/* TODO 这也要封成一个组件 */}
+    {/* TODO 这最外层的board也要封成一个组件，方便开发 */}
     <Logo />
     <FlexiableSpace />
     <Avatar />

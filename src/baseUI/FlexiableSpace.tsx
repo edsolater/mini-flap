@@ -1,4 +1,4 @@
-import Div from '../baseUI/Div'
+import Div from './Div'
 import React, { FC } from 'react'
 
 const FlexiableSpace: FC<{ weight?: number }> = ({ weight = 1 }) => (

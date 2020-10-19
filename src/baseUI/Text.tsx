@@ -1,4 +1,4 @@
-import Div from '../baseUI/Div'
+import Div from './Div'
 import React, { CSSProperties, FC } from 'react'
 
 const Text: FC<{
